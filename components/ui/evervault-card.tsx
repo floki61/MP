@@ -3,7 +3,6 @@ import { useMotionValue } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
-import { SparklesCore } from "./sparkles";
 
 export const EvervaultCard = ({
   text,

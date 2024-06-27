@@ -25,7 +25,7 @@ export default function page() {
     },
     {
       text: "Omar.",
-      className: "text-green-500 dark:text-green-500",
+      className: "text-green-950 dark:text-green-900",
     },
   ];
   return (
@@ -48,25 +48,26 @@ export default function page() {
               The road to freedom starts from here
             </p>
             <TypewriterEffectSmooth words={words} />
-            <div className='flex flex-row gap-4'>
-              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" className='hover:underline flex flex-row items-center gap-2 bg-green-950 hover:bg-gray-400 rounded-sm'>
-                <FaLinkedinIn className="hover:text-black text-white p-1 " size={30} />
+            <div className='flex flex-row gap-4 z-50'>
+              <a href="https://www.linkedin.com/in/omar-el-berhichi-23234425b/" target="_blank" rel="noopener noreferrer" className='hover:underline flex flex-row items-center gap-2 bg-green-950 hover:bg-black rounded-sm hover:-rotate-45 duration-700'>
+                <FaLinkedinIn className=" text-white p-1" size={30} />
               </a>
-              <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className='hover:underline flex flex-row items-center gap-2 bg-green-950 rounded-sm hover:bg-gray-400 '>
-                <FaGithub className="hover:text-black text-white p-1" size={30} />
+              <a href="https://github.com/floki61" target="_blank" rel="noopener noreferrer" className='hover:underline flex flex-row items-center gap-2 bg-green-950 rounded-sm hover:bg-black hover:-rotate-45 duration-700'>
+                <FaGithub className="text-white p-1" size={30} />
               </a>
-              <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className='hover:underline flex flex-row items-center gap-2 bg-green-950 rounded-md hover:bg-gray-400 '>
-                <FaDiscord className=" text-white hover:text-black p-1" size={30} />
+              <a href="https://discord.com/users/757367428677238884" target="_blank" rel="noopener noreferrer" className='hover:underline flex flex-row items-center gap-2 bg-green-950 rounded-md hover:bg-black hover:-rotate-45 duration-700'>
+                <FaDiscord className="text-white p-1" size={30} />
               </a>
             </div>
           </div>
           {/* <WavyBackground className="max-w-4xl mx-auto pb-40"> */}
           {/* <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
               Hero waves are cool
-            </p>
-            <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+              </p>
+              <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
               Leverage the power of canvas to create a beautiful hero section
-            </p> */}
+              </p> */}
+
           {/* </WavyBackground> */}
         </div>
       </section>
