@@ -13,6 +13,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        'Poppins': ['Poppins', 'sans-serif'],
+        'Roman': ['grandesign-neue-roman', 'sans-serif'],
+        'Yellowtail' :['Yellowtail', 'cursive'],
+        // Anton : ['Anton', 'sans-serif'],
+        custom: ['now'],
+        against: ['against'],
+        meledrama: ['melodrama'],
+        anton: ["Anton", 'sans-serif'],
+                                              
+      },
     },
   },
   plugins: [],

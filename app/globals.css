@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  /* --mouse-x: 50%; */
+  /* --mouse-y: 50%; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,8 +17,45 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+/* body { background-image: url('/noise.svg'); } */
+
+/*  */
 
 body {
+  background-color: #ffffff;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,10 +63,79 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
-@layer utilities {
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+} */
+.app {
+  height: 100vh;
+  filter: contrast(0%) brightness(0%);
+  background:
+    conic-gradient(from 17deg at 100% 100%, rgb(255, 255, 255), rgba(0, 0, 0, 0.404)),
+    radial-gradient(at var(--mouse-x) var(--mouse-y), rgba(244, 241, 241, 0.269), hsla(0, 5%, 44%, 0.992)),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 352 352' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='5.53' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+.borderi {
+  @apply border-solid border-2 border-blue-700;
+  
+}
+.borderi > * {
+  @apply border-dashed border-2 border-blue-300;
+}
+
+
+html { /* body won't work ¯\_(ツ)_/¯ */
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+body {
+  /* overflow-x: hidden; */
+}
+section {
+  scroll-snap-align: start;
+}
+
+#projects {
+  font-size: clamp(30px, 15vw, 180px);
+}
+h1{
+  font-size: clamp(60px, 20vw, 164px);
+}
+h2 {
+  font-size: clamp(35px, 3vw, 75px);
+}
+
+h3 {
+  font-size: clamp(18px,3vw, 20px);
+}
+
+h4 {
+  font-size: clamp(12px,1.5vw, 20px);
+}
+h5 {
+  font-size: clamp(8px,1vw, 12px);
+}
+p {
+  font-size: clamp(24px,4vw, 18px);
+}
+#contact {
+  font-size: clamp(8px, 3vw, 20px);
+}
+#work {
+  font-size: clamp(16px, 10vw, 250px);
+}
+#projectTitle {
+  font-size: clamp(18px, 4.5vw, 50px);
+}
+#projectIndex {
+  font-size: clamp(20px, 4vw, 65px);
+}
+#about {
+  font-size: clamp(20px, 2.5vw, 25px);
+}
+#resume {
+  font-size: clamp(12px, 2.3vw, 24px);
 }
