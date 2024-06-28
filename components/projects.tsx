@@ -41,7 +41,7 @@ const ProjectsLaptop = () => {
 		<div className='space-y-28 pt-12'>
 			{projects.map((project) => (
 				<div className="flex ">
-					<div className=" text-white flex flex-col  space-y-5">
+					<div className=" text-primary flex flex-col  space-y-5">
 						<div className="flex-1 justify-center  flex flex-col">
 							<p className="" id='projectIndex'>{project.projectName.replace('-', '')}</p>
 							<h4 className=" font-custom opacity-60">{project.sector}</h4>
@@ -69,7 +69,7 @@ const ProjectsLaptop = () => {
 
 						<div>
 							<a href={project.gitHubUrl} target="_blank" rel="noopener noreferrer" className=' flex w-full justify-center'>
-								{/* <Button variant="default" className=' h-[7vw] font-anton border text-[2vw] bg-neutral-800  text-white'>Coude Source</Button> */}
+								{/* <Button variant="default" className=' h-[7vw] font-anton border text-[2vw] bg-neutral-800  text-primary'>Coude Source</Button> */}
 							</a>
 						</div>
 					</div>
@@ -84,18 +84,18 @@ const ProjectsDesktop = () => {
 			{projects.map((project) => (
 				<>
 					{project.id % 2 == 1 ? (
-						<section className=" text-white flex flex-row  gap-14">
+						<section className=" text-primary flex flex-row  gap-14">
 							<div className="flex-1  relative">
 								<div className='space-y-2 h-[40vw]'>
 									<Image className="" src="/bg.jpg" alt='image' fill objectFit="cover" />
 								</div>
-								<div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 break-words uppercase" id='projects' style={{ lineHeight: '1' }}>
+								<div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 break-words uppercase hover:text-secondary z-50" id='projects' style={{ lineHeight: '1' }}>
 									{project.projectName}
 								</div>
 							</div>
 							<div className="flex-1 justify-center  flex flex-col ">
-								<p className="" id='projectIndex'>{project.projectName.replace('-', '')}</p>
-								<p className="w-16 h-px bg-green-500"></p>
+								<p className="text-secondary" id='projectIndex'>{project.projectName.replace('-', '')}</p>
+								<p className="w-16 h-px bg-secondary"></p>
 								<h4 className=" font-custom pt-2 opacity-60">{project.sector}</h4>
 								<h4 className="pt-12 font-anton" style={{ lineHeight: '1.5' }}>
 									{project.description}
@@ -109,18 +109,18 @@ const ProjectsDesktop = () => {
 								</div>
 								<div>
 									<a href={project.gitHubUrl} target="_blank" rel="noopener noreferrer" className=' flex w-full pt-12'>
-										{/* <Button variant="default" className='  h-[3vw] font-anton border text-[1vw] bg-zinc-800  text-white'>Coude Source</Button> */}
+										{/* <Button variant="default" className='  h-[3vw] font-anton border text-[1vw] bg-zinc-800  text-primary'>Coude Source</Button> */}
 									</a>
 								</div>
 							</div>
 						</section>
 					) : (
-						<section className=" text-white flex flex-row  gap-14 ">
+						<section className=" text-primary flex flex-row  gap-14 ">
 							<div className="flex-1 justify-center  flex flex-col ">
-								<p className="" id='projectIndex'>{project.projectName.replace('-', '')}</p>
-								<p className="w-16 h-px bg-green-500"></p>
-								<h4 className=" font-custom pt-16 opacity-60">{project.sector}</h4>
-								<h4 className="py-4  font-anton" style={{ lineHeight: '1.5' }}>
+								<p className="text-secondary" id='projectIndex'>{project.projectName.replace('-', '')}</p>
+								<p className="w-16 h-px bg-secondary"></p>
+								<h4 className=" font-custom pt-2 opacity-60">{project.sector}</h4>
+								<h4 className="pt-12  font-anton" style={{ lineHeight: '1.5' }}>
 									{project.description}
 								</h4>
 								<div className=' flex flex-wrap gap-2 font-custom'>
@@ -133,16 +133,16 @@ const ProjectsDesktop = () => {
 
 								<div>
 									<a href={project.gitHubUrl} target="_blank" rel="noopener noreferrer" className=' flex w-full pt-12'>
-										{/* <Button variant="default" className='  h-[3vw] font-anton border text-[1vw]  bg-neutral-800  text-white'>Coude Source</Button> */}
+										{/* <Button variant="default" className='  h-[3vw] font-anton border text-[1vw]  bg-neutral-800  text-primary'>Coude Source</Button> */}
 									</a>
 								</div>
-								{/* <Button variant="link" className='font-anton  border bg-neutral-800 w-[14vw] text-white'>Coude Source</Button> */}
+								{/* <Button variant="link" className='font-anton  border bg-neutral-800 w-[14vw] text-primary'>Coude Source</Button> */}
 							</div>
 							<div className="flex-1 relative">
 								<div className='space-y-2 h-[40vw]'>
 									<Image className="" src="/bg.jpg" alt='image' fill objectFit="cover" />
 								</div>
-								<div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 break-words uppercase" id='projects' style={{ lineHeight: '1' }}>
+								<div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 break-words uppercase hover:text-secondary z-50" id='projects' style={{ lineHeight: '1' }}>
 									{project.projectName}
 								</div>
 							</div>
@@ -171,27 +171,25 @@ export default function Projects() {
 
 	// const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 640px)' });
 	return (
-
-			<div className=" bg-black">
-				<div className="container mx-auto h-full p-16 bg-[black]">
-					<div className='flex flex-col justify-center sm:pt-32 pt-12'>
-						<p className='font-meledrama font-bold text-2xl'>
-							<span className=' text-green-700'>2. </span>
-							<span className='text-white'> Projects</span>
-						</p>
-						<div className="text-white">
-							<h2>I've worked some amazing projects!</h2>
-							<div className="w-16 border border-green-700 leading-4 mb-6 "></div>
-						</div>
-					</div>
-					<div>
-						{isDesktopOrLaptop ? (
-							<ProjectsDesktop />
-						) : (
-							<ProjectsLaptop />
-						)}
+		<div className="container mx-auto p-4 md:p-26 h-full pb-0 pt-0 bg-black">
+			<div className='p-10 sm:pt-36 pt-24'>
+				<div className='flex flex-col justify-center'>
+					<p className='font-meledrama font-bold text-2xl'>
+						<span className='text-secondary'> Projects</span>
+					</p>
+					<div className="text-primary">
+						<h2>I've worked some amazing projects!</h2>
+						<div className="w-16 border border-primary leading-4 mb-6 "></div>
 					</div>
 				</div>
-			</div >
+				<div>
+					{isDesktopOrLaptop ? (
+						<ProjectsDesktop />
+					) : (
+						<ProjectsLaptop />
+					)}
+				</div>
+			</div>
+		</div>
 	)
 }

@@ -22,7 +22,7 @@
 /*  */
 
 body {
-  background-color: #ffffff;
+  background-color: #000000;
   margin: 0;
   overflow-x: hidden;
 }
@@ -87,12 +87,12 @@ body {
 }
 
 
-html { /* body won't work ¯\_(ツ)_/¯ */
+html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
 body {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 section {
   scroll-snap-align: start;
