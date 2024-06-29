@@ -17,14 +17,17 @@ export default function page() {
         <EvervaultCard text='Hover' />
       </section>
       <section>
-        <About />
+        {/* <About /> */}
       </section>
       <section>
-        <Projects />
+        {/* <Projects /> */}
       </section>
       <section>
         <Footer />
       </section>
     </div>
+    // https://mysite-git-main-omar-el-berhichis-projects.vercel.app/
+    // https://mysite-f0y6xlkpy-omar-el-berhichis-projects.vercel.app/
+    // https://mysite-1lolcq5ng-omar-el-berhichis-projects.vercel.app/
   )
 }
