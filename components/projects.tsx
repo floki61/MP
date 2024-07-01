@@ -56,7 +56,7 @@ const ProjectsLaptop = () => {
 							<div className='space-y-2 h-[40vw]' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 								<Image className="" src="/bg.jpg" alt='image' fill objectFit="cover" />
 							</div>
-							<div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 break-words uppercase" id='projects' style={{ lineHeight: '1', textAlign: 'center', marginTop: '5px' }}>
+							<div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 break-words uppercase text-secondary" id='projects' style={{ lineHeight: '1', textAlign: 'center', marginTop: '5px' }}>
 								{project.projectName}
 							</div>
 						</div>

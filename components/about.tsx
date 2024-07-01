@@ -29,11 +29,10 @@ export default function About() {
                                 <div className="w-16 border border-primary leading-4 mb-6 "></div>
                             </div>
 
-                            <h4 className='mb-4 font-custom capitalize  font-extralight text-base sm:text-xl text-[#98887d] leading-7'>And i am a full-stack developer raised in Agadir, Morocco, a city known for its stunning beaches and breathtaking sunsets. Currently, I am a student at 1337 School, a 42-like school located in Ben Guerir, where I am honing my skills in various fields of computer science, and web development.</h4>
-                            <button className='hover:underline font-custom font-extrabold pt-2 sm:pb-6 pb-2 text-xl sm:text-2xl line-through'>Resume</button>
+                            <h4 className='mb-4 font-custom capitalize  font-extralight text-sm sm:text-xl text-[#98887d] sm:leading-7 leading-6'>And i am a full-stack developer raised in Agadir, Morocco, a city known for its stunning beaches and breathtaking sunsets. Currently, I am a student at 1337 School, a 42-like school located in Ben Guerir, where I am honing my skills in various fields of computer science, and web development.</h4>
+                            <button className='hover:underline font-custom font-extrabold pt-2 sm:pb-6 pb-2 text-xl sm:text-2xl line-through text-primary opacity-30'>Resume</button>
                         </div>
                         <div className='relative space-y-2 h-[60vh] sm:h-[50vw] w-full lg:h-[400px] lg:w-[1800px]  md:h-[50vw]'>
-
                             <Image src='/zwin2.png' alt='ana' fill objectFit='cover' />
                         </div>
                     </div>

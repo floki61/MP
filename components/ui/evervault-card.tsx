@@ -17,7 +17,7 @@ export const EvervaultCard = ({
   const [randomString, setRandomString] = useState("");
 
   useEffect(() => {
-    let str = generateRandomString(1500);
+    let str = generateRandomString(15000);
     setRandomString(str);
   }, []);
 
@@ -26,14 +26,14 @@ export const EvervaultCard = ({
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
 
-    const str = generateRandomString(20000);
+    const str = generateRandomString(200000);
     setRandomString(str);
   }
 
   return (
     // <div className="container mx-auto p-4 pb-0 pt-20 md:p-20 md:pb-0 md:pt-64 lg:p-36 lg:pb-0 lg:pt-64 h-screen">
     <div>
-      <div className="h-screen p-4 md:p-26 sm:pt-64 pt-16 pb-0">
+      <div className="h-screen p-4 md:p-26 sm:pt-64 pt-28 pb-0 ">
         <div
           className={cn(
             " container mx-auto  bg-transparent flex w-full h-full relative bg-[#131518] rounded-t-lg",
@@ -55,14 +55,14 @@ export const EvervaultCard = ({
             <div className="relative z-10 flex w-full">
               <div className="z-0  w-full flex  text-white font-bold text-4xl bg-transparent">
                 <div className="w-full flex flex-col sm:justify-end justify-center p-4 md:p-16 pb-20 overflow-hidden">
-                  <div className='md:space-y-5 space-y-7 w-full'>
+                  <div className='md:space-y-5 space-y-0 w-full'>
                     <div className="flex flex-col items-center sm:items-start">
                       <h2 className='text-black text-2xl lg:text-5xl font-extralight shadow-white font-Poppins'>
                         Yo yo my dear stranger,
                       </h2>
-                      <div className="w-16 border border-secondary leading-4 mb-6 "></div>
+                      <div className="w-16 border border-secondary leading-4 "></div>
                     </div>
-                    <h1 className="text-[18vw] sm:text-[10vh] md:text-[10vw] xl:text-[180px] font-bold text-black relative sm:text-start text-center leading-tight">
+                    <h1 className="text-[17vw] sm:text-[10vh] md:text-[10vw] xl:text-[180px] font-bold text-black relative sm:text-start text-center leading-tight">
                       Welcome to <br />My Code Cave
                     </h1>
                   </div>
