@@ -22,8 +22,8 @@ export default function Footer() {
         },
     ];
     return (
-        <div className='p-4 md:p-26 pb-0 pt-0 h-screen'>
-            <div className="container mx-auto flex flex-col items-center justify-center h-full bg-gradient-to-b from-black to-[#131518]">
+        <div className='p-4 md:p-26 pt-0 h-screen pb-64'>
+            <div className="container mx-auto flex flex-col items-center justify-center pt-28 h-full bg-gradient-to-b from-black to-[#131518]">
                 <p className="text-primary text-xs sm:text-xl opacity-50 font-Poppins">
                     The road to freedom starts from here
                 </p>

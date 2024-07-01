@@ -8,6 +8,7 @@ import { TracingBeam } from '@/components/ui/tracing-beam'
 import { WavyBackground } from '@/components/ui/wavy-background'
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect'
 import { FaLinkedin, FaGithub, FaDiscord, FaLinkedinIn } from 'react-icons/fa';
+import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 
 export default function page() {
@@ -17,17 +18,14 @@ export default function page() {
         <EvervaultCard text='Hover' />
       </section>
       <section>
-        {/* <About /> */}
+        <About />
       </section>
       <section>
-        {/* <Projects /> */}
+        <Projects />
       </section>
       <section>
         <Footer />
       </section>
     </div>
-    // https://mysite-git-main-omar-el-berhichis-projects.vercel.app/
-    // https://mysite-f0y6xlkpy-omar-el-berhichis-projects.vercel.app/
-    // https://mysite-1lolcq5ng-omar-el-berhichis-projects.vercel.app/
   )
 }

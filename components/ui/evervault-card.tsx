@@ -33,7 +33,7 @@ export const EvervaultCard = ({
   return (
     // <div className="container mx-auto p-4 pb-0 pt-20 md:p-20 md:pb-0 md:pt-64 lg:p-36 lg:pb-0 lg:pt-64 h-screen">
     <div>
-      <div className="h-screen p-4 md:p-26 pt-64 pb-0">
+      <div className="h-screen p-4 md:p-26 sm:pt-64 pt-16 pb-0">
         <div
           className={cn(
             " container mx-auto  bg-transparent flex w-full h-full relative bg-[#131518] rounded-t-lg",
@@ -54,25 +54,25 @@ export const EvervaultCard = ({
             />
             <div className="relative z-10 flex w-full">
               <div className="z-0  w-full flex  text-white font-bold text-4xl bg-transparent">
-                <div className="w-full flex flex-col justify-end p-4 pt-32 md:p-16 pb-20 overflow-hidden">
+                <div className="w-full flex flex-col sm:justify-end justify-center p-4 md:p-16 pb-20 overflow-hidden">
                   <div className='md:space-y-5 space-y-7 w-full'>
-                    <div className="">
+                    <div className="flex flex-col items-center sm:items-start">
                       <h2 className='text-black text-2xl lg:text-5xl font-extralight shadow-white font-Poppins'>
                         Yo yo my dear stranger,
                       </h2>
                       <div className="w-16 border border-secondary leading-4 mb-6 "></div>
                     </div>
-                    <h1 className="text-[10vh] lg:text-[180px] font-bold text-black relative md:text-start  md:leading-none leading-[100px]">
+                    <h1 className="text-[18vw] sm:text-[10vh] md:text-[10vw] xl:text-[180px] font-bold text-black relative sm:text-start text-center leading-tight">
                       Welcome to <br />My Code Cave
                     </h1>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 };

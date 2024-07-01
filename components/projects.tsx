@@ -2,38 +2,32 @@
 // import { Button } from './ui/button';
 // import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { TracingBeam } from './ui/tracing-beam';
+import copy from 'clipboard-copy';
 
 
 const projects = [
 	{
 		id: 1,
-		projectName: "Port-folio",
-		sector: "Web ,Rigor",
+		projectName: "Pong-Game",
+		sector: "Web ,Group & interpersonal ,Rigor",
 		gitHubUrl: "https://github.com/floki61/transcendence",
-		description: 'A full stack web application based on the Mighty Pong Game, with social media features and a leaderboard. The web application is built using Typescript and Next for the frontend, and NestJS for the backend. The database is a PostgreSQL database, and the application is deployed on using Docker..',
+		description: 'A full stack web application based on the Mighty Pong Game, with social media features and a leaderboard. The web application is built using Typescript and Next for the frontend, and NestJS for the backend. The database is a PostgreSQL database, and the application is deployed on using Docker',
 	},
 	{
 		id: 2,
-		projectName: "Ping-Pong",
+		projectName: "UM6P-Intranet",
 		sector: "Web ,Group & interpersonal ,Rigor",
 		gitHubUrl: "https://github.com/floki61/transcendence",
-		description: 'A full stack web application based on the Mighty Pong Game, with social media features and a leaderboard. The web application is built using Typescript and Next for the frontend, and NestJS for the backend. The database is a PostgreSQL database, and the application is deployed on using Docker..',
+		description:"The UM6P Intranet project was a significant endeavor where I played a crucial role in its development. It involved creating a comprehensive platform that catered to the diverse needs of university departments and members. My responsibilities primarily focused on enhancing the user interface to ensure optimal usability and experience. I integrated various frontend components, ensuring seamless interaction and intuitive navigation. This project highlighted my ability to contribute effectively to complex web applications, utilizing technologies like Next.js and TypeScript to deliver robust and user-friendly solutions.",
 	},
 	{
 		id: 3,
-		projectName: "Ince-ption",
-		sector: 'Network & system administration, Rigor',
+		projectName: "Van-ai",
+		sector: 'Web ,Rigor',
 		gitHubUrl: "https://github.com/floki61/inception",
-		description: 'The Inception project is designed to provide a hands-on exploration of system administration, with a specific focus on leveraging Docker ation.',
-	},
-	{
-		id: 4,
-		projectName: "Web-Serv",
-		sector: 'Unix ,Network & system administration ,Rigor ,Object-oriented programming',
-		gitHubUrl: "https://github.com/medfx69/webserver",
-		description: 'This project focuses on implementing a custom HTTP server in C++ 98, providing hands-on experience with the HTTP protocol and system administration for web servers. The project aims to understand the intricacies of URL, HTTP, and web server functionality.',
+		description: "I spearheaded frontend development for a dynamic platform, orchestrating the creation of sleek, responsive landing and sales pages powered by Next.js and TypeScript. I orchestrated the integration of Django and Djoser for seamless user authentication, ensuring a secure and user-friendly experience. Additionally, I crafted comprehensive documentation using Nextra, empowering users with clear insights into the platform's functionalities.",
 	},
 ]
 const ProjectsLaptop = () => {
@@ -168,9 +162,20 @@ export default function Projects() {
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
+	const text = 'omarelberhichipro@gmail.com';
+	const [isCopied, setIsCopied] = useState(false);
+	const handleCopyClick = async () => {
+		try {
+			await copy(text);
+			setIsCopied(true);
+		} catch (error) {
+			console.error('Failed to copy text to clipboard', error);
+		}
+	};
 
 	// const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 640px)' });
 	return (
+
 		<div className="container mx-auto p-4 md:p-26 h-full pb-0 pt-0 bg-black">
 			<div className='p-10 sm:pt-36 pt-24'>
 				<div className='flex flex-col justify-center'>
@@ -188,6 +193,21 @@ export default function Projects() {
 					) : (
 						<ProjectsLaptop />
 					)}
+				</div>
+			</div>
+			<div className=' h-96 p-10'>
+				<div className='flex flex-col justify-end h-full'>
+					<span className='text-secondary font-meledrama font-bold text-2xl'>Sure, let's Talk</span>
+					<span className='text-primary font-Poppins pt-4 text-sm sm:text-2xl font-extralight'>this is my e-mail if you want to reach out</span>
+					<button
+						onClick={handleCopyClick}
+						className='relative text-primary pt-12 text-xl sm:3xl md:text-5xl lg:text-6xl font-extrabold font-anton border-b w-fit pb-6 border-primary z-50 hover:text-secondary hover:duration-700 hover:pl-6'
+					>
+						omarelberhichipro@gmail.com
+						<span className="absolute left-0 pl-7 pb-7  opacity-0 transition-opacity  hover:opacity-100 hover:duration-700 text-sm text-primary h-20 w-full text-end">
+							{isCopied ? 'Done' : 'Copy email'}
+						</span>
+					</button>
 				</div>
 			</div>
 		</div>
