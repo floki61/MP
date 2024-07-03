@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next";
 import { Anton, Inter } from "next/font/google";
 import "./globals.css";
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={anton.className}>
         <div>
+          <SpeedInsights />
           <NavBar />
           <SidesBar />
           {children}
